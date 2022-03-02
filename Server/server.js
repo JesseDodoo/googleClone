@@ -7,19 +7,22 @@ const cors = require('cors');
 const PORT=3000;
 app.use(express.static(path.join(__dirname,'../client')))
 app.use(express.json())
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
 const webData = require("../data")
 
-app.get("/search", (req,res) => {
-  res.send(webData)
+
+app.post('/search', (req, res)=>{
+  console.log(req,req.body.inputTxt)
+  res.send(`your results for ${req.body.inputTxt}`)
 })
 
-// app.get('/', (req, res)=>{
-//     res.sendFile('../client/index.html')
-// })
+app.get('/', (req, res)=>{
+    res.sendFile('../client/index.html')
+})
 
 app.get('/:id', (req,res) => {
   const randomSite = webData[Math.floor(Math.random()* webData.length)]
