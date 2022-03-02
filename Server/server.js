@@ -19,7 +19,7 @@ app.get("/search", (req,res) => {
 
 app.post("/search", (req, res)=>{
   console.log(req.body.search)
-  res.json("Hello")
+  res.json(`Your results for ${req.body.search}`)
 })
 
 app.get('/', (req, res)=>{
