@@ -25,15 +25,20 @@ let knownSites=
     return body
 }*/
 
+const webData = require("../data")
+
+app.get("/search", (req,res) => {
+  res.send(webData)
+})
 
 app.get('/', (req, res)=>{
     res.sendFile('../client/index.html')
 })
 
-app.post('/search', (req, res)=>{
-  console.log(req.body.textInput)
+// app.post('/search', (req, res)=>{
+//   console.log(req.body.textInput)
   
-})
+// })
 
 // To do: Get the server running
 app.listen(PORT,()=>{
