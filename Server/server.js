@@ -17,6 +17,11 @@ app.get("/search", (req,res) => {
   res.send(webData)
 })
 
+app.post("/search", (req, res)=>{
+  console.log(req.body.search)
+  res.json("Hello")
+})
+
 app.get('/', (req, res)=>{
     res.sendFile('../client/index.html')
 })
