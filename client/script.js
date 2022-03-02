@@ -1,5 +1,4 @@
-
-async function getSite(e) {
+async function getSites(e) {
     e.preventDefault()
 
     const res = await fetch('http://localhost:3000/search')
@@ -19,7 +18,28 @@ async function getSite(e) {
       }
 
   }
-  let formBtn1 = document.querySelector("#s-1");
-  formBtn1.addEventListener('submit', getSite)
+  let googleSearchBtn = document.querySelector("#s-1");
+  googleSearchBtn.addEventListener('click', getSites)
+
+
+  let luckyBtn = document.querySelector("#s-2");
+  luckyBtn.addEventListener('click', getSite)
+
+  async function getSite(e) {
+    e.preventDefault()
+
+    const res = await fetch('http://localhost:3000/:id')
+      const data = await res.json()
+      console.log(data)
+      const result = document.getElementById('results')
+      
+      result.innerHTML += 
+        `<ul>
+        <li>${data.web}</li>
+            </ul> `
+
+  }
+
+
 
 
