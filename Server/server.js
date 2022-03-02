@@ -35,6 +35,11 @@ app.get('/', (req, res)=>{
     res.sendFile('../client/index.html')
 })
 
+app.get('/:id', (req,res) => {
+  const randomSite = webData[Math.floor(Math.random()* webData.length)]
+  res.send(randomSite)
+})
+
 // app.post('/search', (req, res)=>{
 //   console.log(req.body.textInput)
   
