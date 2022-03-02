@@ -10,20 +10,6 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-let knownSites=
-['https://en.wikipedia.org/wiki/',
-
-]
-
-/*async function get(URL){
-    const requestOptions={
-        method: 'GET',
-      }
-    const res= await fetch(URL, requestOptions);
-    const body=await res.text()
-    console.log(body)
-    return body
-}*/
 
 const webData = require("../data")
 
@@ -39,11 +25,6 @@ app.get('/:id', (req,res) => {
   const randomSite = webData[Math.floor(Math.random()* webData.length)]
   res.send(randomSite)
 })
-
-// app.post('/search', (req, res)=>{
-//   console.log(req.body.textInput)
-  
-// })
 
 // To do: Get the server running
 app.listen(PORT,()=>{
