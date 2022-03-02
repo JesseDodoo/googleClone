@@ -17,9 +17,9 @@ app.get("/search", (req,res) => {
   res.send(webData)
 })
 
-app.get('/', (req, res)=>{
-    res.sendFile('../client/index.html')
-})
+// app.get('/', (req, res)=>{
+//     res.sendFile('../client/index.html')
+// })
 
 app.get('/:id', (req,res) => {
   const randomSite = webData[Math.floor(Math.random()* webData.length)]

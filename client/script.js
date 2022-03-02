@@ -11,12 +11,15 @@ async function getSite(e) {
         const element = data[i];
         console.log(element)
 
-        result.innerHTML = element.web
+        result.innerHTML += 
+        `<ul>
+        <li>${element.web}</li>
+            </ul> `
         
       }
 
   }
-  const form = document.querySelector('form')
-  form.addEventListener('submit', getSite)
+  let formBtn1 = document.querySelector("#s-1");
+  formBtn1.addEventListener('submit', getSite)
 
 

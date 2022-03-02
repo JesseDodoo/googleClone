@@ -25,13 +25,14 @@
             <span style="color:#db3236">e</span>
             
         </div>
-        <form action="/search" method="post">
+        <!-- action="/search" method="post" -->
+        <form >
             <br><br>
             <div class="s-box">
                 <img src="img/SearchIcon.svg" class="search-icon" alt="">
-                <input type="text" id="textInput" name="textInput" class="s-input">
+                <input type="text" class="s-input">
                 <img src="img/Google_mic.svg.png" class ="mic-icon" alt="">
-                <input type="submit" value="Google search" class="s-btn">
+                <input type="submit" value="Google search" class="s-btn" id="s-1">
                 <input type="submit" value="I'm feeling lucky" class="s-btn">
             </div>
         </form>
@@ -39,6 +40,11 @@
             Google offered in:
             <a href="#">Nederlands</a>
             <a href="#">Frysk</a>
+        </div>
+        <div id="results">
+            <ul>
+                <li></li>
+            </ul>
         </div>
     </section>
     <footer>
@@ -57,7 +63,6 @@
             </div>
         </div>
     </footer>
-    <div id="results"></div>
     
 </body>
 <script src="script.js"></script>
