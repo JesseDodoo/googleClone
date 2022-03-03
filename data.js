@@ -9,6 +9,7 @@ const weblinks = [
     {id: 8, web: '"https://www.instagram.com/?hl=en"'},
     {id: 9, web: '"https://twitter.com/home?lang=en"'},
     {id: 10, web: '"https://github.com/"'},
+    {id: 11, web: 'https://en.wikipedia.org/wiki/'}
    
 ]
 
