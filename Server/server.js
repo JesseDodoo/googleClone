@@ -17,7 +17,7 @@ const webData = require("../data")
 
 app.post('/search', (req, res)=>{
   console.log(req,req.body.inputTxt)
-  res.render('results.ejs', {data: req.body.inputTxt})
+  res.render('results.ejs', {data: req.body.inputTxt, sites:webData})
 })
 
 app.get('/', (req, res)=>{
