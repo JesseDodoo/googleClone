@@ -13,7 +13,7 @@ async function getSites(e) {
         result.innerHTML += 
         `<ul>
         <li>${element.web}</li>
-            </ul> `
+        </ul> `
         
       }
 
@@ -36,7 +36,7 @@ async function getSites(e) {
       result.innerHTML += 
         `<ul>
         <li>${data.web}</li>
-            </ul> `
+        </ul> `
 
   }
 
